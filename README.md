@@ -22,6 +22,8 @@ To run this tool, you need to set your OpenAI key in your envirnment variables.
 
 You can get a new one here : https://platform.openai.com/account/api-keys
 
+![api-key](https://user-images.githubusercontent.com/670586/236320373-df982409-9d12-4aef-90e1-d59409a12338.png)
+
 ### macOS and Linux
 ```bash
 export OPENAI_API_KEY="<your_api_key>"
