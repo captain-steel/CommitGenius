@@ -21,13 +21,13 @@
     "axios": "1.4.0",
     "dotenv": "16.0.3",
     "simple-git": "3.18.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "yargs": "17.7.2"
   },
   "devDependencies": {
     "@types/yargs": "17.0.24",
     "prettier": "2.8.8",
-    "ts-node": "10.9.1",
-    "yargs": "17.7.2"
+    "ts-node": "10.9.1"
   },
   "bin": {
     "CommitGenius": "dist/index.js"
