@@ -1,6 +1,6 @@
 # CommitGenius
 
-Powered by the advanced GPT-4 AI model, CommitGenius analyzes the changes in your repository and generates a summary in either a funny or professional tone, as per your preference.
+Powered by GPT-4, `CommitGenius` analyzes the changes in your repository and generates a summary in either a funny or professional tone, as per your preference.
 
 ## Installation
 ```bash
