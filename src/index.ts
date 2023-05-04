@@ -15,17 +15,23 @@ dotenv.config();
     .option('repo', {
       alias: 'r',
       type: 'string',
-      description: 'Relative path to the git repository'
+      description: 'Relative path of the git repository'
     })
     .help()
     .version()
     .parse();
 
+  // Grab the --repo argument passed in to the script
+  // If the argument exists, use that path, otherwise use the current directory
   const repo = argv.repo ? path.resolve(argv.repo) : path.resolve('.');
 
+  // Get the changes from the repository
+  // If there are any changes:
+  //   - Generate a prompt based on those changes
+  //   - Call the GPT API using that prompt
+  //   - Print the result
+  // If there are no changes, print a message to the console
   const repoChanges = await getChanges(repo);
-  console.log(repoChanges);
-
   if (repoChanges && repoChanges.length > 0) {
     const prompt = generate(repoChanges);
     const result = await callGpt(prompt);
@@ -35,6 +41,6 @@ dotenv.config();
       console.log(`Failed: ${result.finish_reason}`);
     }
   } else {
-    console.log('No changes are found')
+    console.log('No changes are found');
   }
 })();

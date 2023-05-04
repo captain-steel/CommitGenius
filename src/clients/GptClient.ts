@@ -1,5 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
+// makes a POST request to OpenAI API using axios
+// returns an object with success flag and either message content or the finish_reason, based on the result.
 export async function callGpt(query: string): Promise<GptResponse> {
   try {
     const { data }: AxiosResponse = await axios.post(
