@@ -1,0 +1,3 @@
+interface Args {
+  repo?: string;
+}

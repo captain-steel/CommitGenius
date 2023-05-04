@@ -1,0 +1,35 @@
+{
+  "name": "commitgenius",
+  "version": "1.0.0",
+  "description": "cross-platform command-line tool to generate commit messages from local changes",
+  "main": "index.js",
+  "homepage": "https://github.com/wassim-azirar/CommitGenius",
+  "author": "Wassim AZIRAR",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wassim-azirar/CommitGenius.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf node_modules && rm yarn.lock && yarn install",
+    "update": "yarn upgrade-interactive --latest",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@types/node": "18.16.3",
+    "axios": "1.4.0",
+    "dotenv": "16.0.3",
+    "simple-git": "3.18.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/yargs": "17.0.24",
+    "prettier": "2.8.8",
+    "ts-node": "10.9.1",
+    "yargs": "17.7.2"
+  },
+  "bin": {
+    "CommitGenius": "dist/index.js"
+  }
+}
