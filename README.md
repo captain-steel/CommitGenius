@@ -2,6 +2,8 @@
 
 Powered by GPT-4, `CommitGenius` analyzes the changes in your repository and generates a summary in either a funny or professional tone, as per your preference.
 
+https://user-images.githubusercontent.com/670586/236499656-c0da67e6-787d-4132-ac47-22c0f35138f0.mp4
+
 ## Installation
 
 ```bash
