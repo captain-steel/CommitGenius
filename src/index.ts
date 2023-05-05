@@ -17,6 +17,13 @@ dotenv.config();
       type: 'string',
       description: 'Relative path of the git repository'
     })
+    .option('mood', {
+      alias: 'm',
+      type: 'string',
+      description: 'Mood of the commit (pro or funny)',
+      choices: ['funny', 'pro'],
+      default: 'pro'
+    })
     .help()
     .version()
     .parse();
@@ -33,7 +40,7 @@ dotenv.config();
   // If there are no changes, print a message to the console
   const repoChanges = await getChanges(repo);
   if (repoChanges && repoChanges.length > 0) {
-    const prompt = generate(repoChanges);
+    const prompt = generate(repoChanges, argv.mood);
     const result = await callGpt(prompt);
     if (result.success === true) {
       console.log(result.message);

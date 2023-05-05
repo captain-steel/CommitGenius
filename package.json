@@ -1,6 +1,6 @@
 {
   "name": "commitgenius",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "cross-platform command-line tool to generate commit messages from local changes",
   "main": "index.js",
   "homepage": "https://github.com/wassim-azirar/CommitGenius",
