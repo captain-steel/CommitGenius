@@ -1,11 +1,13 @@
 interface FailedGptResponse {
   success: false;
+  finish_reason?: string;
+  error_message?: string;
+}
+
+interface GptChoice {
+  message: any;
+  success: true;
   finish_reason: string;
 }
 
-interface SuccessfulGptResponse {
-  success: true;
-  message: string;
-}
-
-type GptResponse = FailedGptResponse | SuccessfulGptResponse;
+type GptResponse = GptChoice | FailedGptResponse;

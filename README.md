@@ -13,6 +13,7 @@ npm install -g commitgenius
 ## Usage
 
 ### ✍️ simple command
+
 To generate the git comments for the current repo, run the command :
 
 ```bash
@@ -20,6 +21,7 @@ commitgenius
 ```
 
 🖨️ output example :
+
 ```
 feat(cli): Add mood option for generating funny or professional commit messages
 
@@ -30,6 +32,7 @@ feat(cli): Add mood option for generating funny or professional commit messages
 ```
 
 ### ✍️ mood-based command
+
 You can also choose the mood of the comments by passing the `--mood` flag (funny or pro), by default `pro` is used :
 
 ```bash
@@ -37,6 +40,7 @@ commitgenius --mood funny
 ```
 
 🖨️ output example :
+
 ```
 feat(cli): ✨ Add mood-based commit messages 🎭🚀
 
@@ -54,6 +58,7 @@ pure professionalism! The choice is yours. Enjoy! 😄
 ```
 
 ### ✍️ repo-based command
+
 To generate the git comments for another repo, run the command :
 
 ```bash

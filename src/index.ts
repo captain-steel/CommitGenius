@@ -45,7 +45,7 @@ dotenv.config();
     if (result.success === true) {
       console.log(result.message);
     } else {
-      console.log(`Failed: ${result.finish_reason}`);
+      console.error(result.error_message);
     }
   } else {
     console.log('No changes are found');
