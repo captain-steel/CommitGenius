@@ -1,23 +1,23 @@
 export function generate(repoChanges: string, mood: string = 'pro') {
-  let changes = 'Please generate a commit message in the Conventional Commits format based on the following git changes.\n\n';
+  let changes = 'Generate a concise commit message in the Conventional Commits format for the following repository changes.\n\n';
 
-  changes += 'The commit message should be structured as follows:\n';
-  changes += '<type>[optional scope]: <description>\n';
-  changes += '[optional body]\n';
-  changes += '[optional footer(s)]\n\n';
+  changes += 'Format the message as:\n';
+  changes += 'Type(scope): Description\n\n';
 
-  changes += 'Break the line after a meaningful phrase or sentence.\n';
-  changes += 'The lines do not need to be uniform in their length.\n';
-  changes += 'Do not include "co-authored-by", "reviewed-by" or "refs" in the message.\n\n';
+  changes += 'Key Points:\n';
+  changes += '- Summarize the change succinctly.\n';
+  changes += '- Use imperative, present tense (e.g., "change" not "changed" or "changes").\n';
+  changes += '- Scope is optional and refers to the section of the codebase affected.\n';
+  changes += '- Exclude metadata like "co-authored-by", "reviewed-by" or "refs".\n\n';
 
   if (mood === 'funny') {
-    changes += 'Make the message funny and engaging while adhering to the Conventional Commits format.\n';
+      changes += 'Style: Engaging, with a touch of humor.\n\n';
   } else if (mood === 'pro') {
-    changes += 'Keep the message professional and concise, following the Conventional Commits format.\n';
+      changes += 'Style: Professional, clear, and to-the-point.\n\n';
   }
 
-  changes += '\nRepository changes are:\n';
-  changes += repoChanges;
+  changes += 'Changes:\n';
+  changes += repoChanges.trim();
 
   return changes;
 }
