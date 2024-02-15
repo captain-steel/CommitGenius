@@ -7,11 +7,11 @@ export async function callGpt(query: string): Promise<GptResponse> {
     const { data }: AxiosResponse = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: 'gpt-4', // 'gpt-3.5-turbo',
+        model: 'gpt-4-0125-preview', // 'gpt-4' or 'gpt-3.5-turbo',
         messages: [{ role: 'user', content: query }],
         n: 1,
         stream: false,
-        temperature: 1.0,
+        temperature: 0.5,
         presence_penalty: 0,
         frequency_penalty: 0
       },
