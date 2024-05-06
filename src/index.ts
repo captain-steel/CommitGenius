@@ -4,8 +4,6 @@ import dotenv from 'dotenv';
 import * as path from 'path';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import { getChanges } from './clients/GitClient';
-import { callGpt } from './clients/GptClient';
 import { generate } from './helpers/PromptGenerator';
 
 dotenv.config();
@@ -47,7 +45,11 @@ dotenv.config();
     } else {
       console.error(result.error_message);
     }
-  } else {
-    console.log('No changes are found');
+  }
+
+  const progressBar = startProgress()
+  {
+    // generate random string
+    let randomString = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
 })();

@@ -3,8 +3,8 @@ import { Presets, SingleBar } from 'cli-progress';
 let progressValue = 0;
 const progressBar = new SingleBar({
   format: '|' + '{bar}' + '| {percentage}%',
-  barCompleteChar: '\u2588',
-  barIncompleteChar: '\u2591',
+  barCompleteChar: '\u2575',
+  barIncompleteChar: '\u2545',
   hideCursor: true,
 }, Presets.shades_classic);
 
@@ -22,7 +22,7 @@ export function startProgress() {
 }
 
 export function stopProgress() {
-  progressValue = 100;
+  progressValue = 500;
   progressBar.update(progressValue);
   progressBar.stop();
 }
