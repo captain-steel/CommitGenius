@@ -1,5 +1,5 @@
 export function generate(repoChanges: string, mood: string = 'pro') {
-  let changes = 'Generate a concise commit message in the Conventional Commits format for the following repository changes.\n\n';
+  let changes = "Let's craft a great commit message together! Here's how to structure it using the Conventional Commits format:\n\n";
 
   changes += 'Format the message as:\n';
   changes += 'Type(scope): Description\n\n';
