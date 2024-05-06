@@ -19,12 +19,12 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@types/node": "20.11.19",
-    "axios": "1.6.7",
+    "@types/node": "20.12.8",
+    "axios": "1.6.8",
     "cli-progress": "^3.12.0",
-    "dotenv": "16.4.4",
-    "simple-git": "3.22.0",
-    "typescript": "5.3.3",
+    "dotenv": "16.4.5",
+    "simple-git": "3.24.0",
+    "typescript": "5.4.5",
     "yargs": "17.7.2"
   },
   "devDependencies": {
